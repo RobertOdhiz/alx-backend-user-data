@@ -33,3 +33,11 @@ def unauthorized_err() -> None:
       - unauthorized error
     """
     abort(401)
+
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
+def forbidden_err() -> None:
+    """ GET /api/v1/forbidden
+    Return:
+      - forbidden error
+    """
+    abort(403)
